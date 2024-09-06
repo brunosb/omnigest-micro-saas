@@ -1,0 +1,17 @@
+services:
+  database:
+    image: docker.io/bitnami/postgresql:11.12.0
+    container_name: db-omnigest
+    restart: always
+    ports:
+      - "10432:5432"
+    environment:
+      - POSTGRESQL_USERNAME=postgres
+      - POSTGRESQL_PASSWORD=omnigest123
+      - POSTGRESQL_DATABASE=omnigest
+    volumes:
+      - pgdata:/bitnami/postgresql
+
+volumes:
+  pgdata:
+    driver: local
