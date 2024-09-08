@@ -1,22 +1,16 @@
 import { cn } from '@/lib/utils'
 import { ReactNode } from 'react'
 
-export type DashboardPageGenericProps<T = unknown> = {
+export type PageGenericProps<T = unknown> = {
 	children: ReactNode
 	className?: string
 } & T
 
-export function DashboardPage({
-	children,
-	className,
-}: DashboardPageGenericProps) {
+export function Page({ children, className }: PageGenericProps) {
 	return <section className={cn('h-screen', className)}>{children}</section>
 }
 
-export function DashboardPageHeader({
-	children,
-	className,
-}: DashboardPageGenericProps) {
+export function PageHeader({ children, className }: PageGenericProps) {
 	return (
 		<header
 			className={cn('px-6 py-3 h-[50px] border-b border-border', className)}
@@ -26,10 +20,7 @@ export function DashboardPageHeader({
 	)
 }
 
-export function DashboardPageHeaderTitle({
-	children,
-	className,
-}: DashboardPageGenericProps) {
+export function PageHeaderTitle({ children, className }: PageGenericProps) {
 	return (
 		<h1 className={cn('text-muted-foreground uppercase', className)}>
 			{children}
@@ -37,16 +28,10 @@ export function DashboardPageHeaderTitle({
 	)
 }
 
-export function DashboardPageNav({
-	children,
-	className,
-}: DashboardPageGenericProps) {
+export function PageNav({ children, className }: PageGenericProps) {
 	return <nav className={cn('', className)}>{children}</nav>
 }
 
-export function DashboardPageMain({
-	children,
-	className,
-}: DashboardPageGenericProps) {
+export function PageMain({ children, className }: PageGenericProps) {
 	return <main className={cn('p-6', className)}>{children}</main>
 }

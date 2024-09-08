@@ -4,15 +4,16 @@ import {
 	PageHeaderTitle,
 	PageMain,
 } from '@/components/main/page'
+import { CompanyDataTable } from './_components/company-data-table'
 
-export default function SettingsPage() {
+export default function CompaniesPage() {
 	return (
 		<Page>
 			<PageHeader>
-				<PageHeaderTitle>Configurações</PageHeaderTitle>
+				<PageHeaderTitle>Empresas</PageHeaderTitle>
 			</PageHeader>
 			<PageMain>
-				<h1>Configurações</h1>
+				<CompanyDataTable />
 			</PageMain>
 		</Page>
 	)

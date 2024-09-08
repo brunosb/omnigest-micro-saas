@@ -5,14 +5,14 @@ import {
 	PageMain,
 } from '@/components/main/page'
 
-export default function SettingsPage() {
+export default async function AppPage() {
 	return (
 		<Page>
 			<PageHeader>
-				<PageHeaderTitle>Configurações</PageHeaderTitle>
+				<PageHeaderTitle>Dashboard</PageHeaderTitle>
 			</PageHeader>
 			<PageMain>
-				<h1>Configurações</h1>
+				<h1>Dashboard</h1>
 			</PageMain>
 		</Page>
 	)
